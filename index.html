@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home | JINMAZA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="topbar">100% fruit-forward energy · crafted for fresh moments</div>
+    <header class="nav">
+        <div class="container nav-inner">
+            <a class="logo" href="index.html">JIN<span>MAZA</span></a>
+            <nav class="navlinks"><a href="index.html">Home</a><a href="products.html">Flavours</a><a
+                    href="ingredients.html">Ingredients</a><a href="about.html">About</a><a
+                    href="contact.html">Contact</a></nav>
+            <a class="cart-link" href="cart.html">🛒 <span class="cart-count">0</span></a><button
+                class="menu">☰</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero container">
+            <div class="hero-copy reveal">
+                <div class="eyebrow">Our fresh philosophy</div>
+                <h1>REFRESH<br>YOUR <span>MOMENT.</span></h1>
+                <p>Real fruit. Real freshness. JINMAZA brings bold flavour, playful energy and a premium sip to every
+                    moment.</p>
+                <div class="actions"><a class="btn btn-dark" href="products.html">Explore flavours</a><a
+                        class="btn btn-orange" href="shop.html">Shop now</a></div>
+            </div>
+            <div class="hero-stage">
+                <div class="stage-glow"></div>
+                <div class="stage-ring"></div>
+                <div class="splash"></div>
+                <span class="fruit f1">🍓</span><span class="fruit f2">🍊</span><span class="fruit f3">🍋</span><span
+                    class="fruit f4">🥭</span><span class="fruit f5">🍎</span>
+                <div class="bottle-wrap">
+                    <div class="hero-slider">
+                        <div class="hero-slide active"><img class="hero-product-img" src="mango.jpg"
+                                alt="Mango JINMAZA">
+                            <div class="bottle-shine"></div>
+                        </div>
+                        <div class="hero-slide"><img class="hero-product-img" src="orange.jpg" alt="Orange JINMAZA">
+                            <div class="bottle-shine"></div>
+                        </div>
+                        <div class="hero-slide"><img class="hero-product-img" src="strawberry.jpg"
+                                alt="Strawberry JINMAZA">
+                            <div class="bottle-shine"></div>
+                        </div>
+                        <div class="hero-slide"><img class="hero-product-img" src="apple.jpg" alt="Apple JINMAZA">
+                            <div class="bottle-shine"></div>
+                        </div>
+                        <div class="hero-slide"><img class="hero-product-img" src="lemon.jpg" alt="Lemon JINMAZA">
+                            <div class="bottle-shine"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-badge">5 bold flavours · 1 fresh feeling</div>
+                <button class="prev"
+                    style="position:absolute;left:5%;bottom:8%;z-index:10;border:0;border-radius:50%;width:46px;height:46px;cursor:pointer">←</button>
+                <button class="next"
+                    style="position:absolute;left:calc(5% + 58px);bottom:8%;z-index:10;border:0;border-radius:50%;width:46px;height:46px;cursor:pointer">→</button>
+            </div>
+        </section>
+        <style>
+            .hero-slider {
+                position: relative
+            }
+
+            .hero-slide {
+                display: none
+            }
+
+            .hero-slide.active {
+                display: block;
+                animation: slideIn .7s ease
+            }
+
+            @keyframes slideIn {
+                from {
+                    opacity: 0;
+                    transform: scale(.95) rotateY(18deg)
+                }
+
+                to {
+                    opacity: 1;
+                    transform: none
+                }
+            }
+        </style>
+        <section class="section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <div>
+                        <div class="eyebrow">Pick your mood</div>
+                        <h2>MEET THE<br>FLAVOURS.</h2>
+                    </div>
+                    <p>Colourful fruit. Big personality. Discover the JINMAZA lineup and find the sip that fits your
+                        moment.</p>
+                </div>
+                <div class="flavour-grid" id="homeGrid"></div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="feature reveal">
+                    <div>
+                        <div class="eyebrow" style="color:var(--lime)">Made to feel fresh</div>
+                        <h2>FRESH IS A FEELING.</h2>
+                        <p>From the colour palette to the motion, every detail is designed to communicate freshness,
+                            optimism and energy.</p><a class="btn btn-light" href="about.html">Discover our story</a>
+                    </div>
+                    <div class="feature-visual"><img src="strawberry.jpg" alt="JINMAZA strawberry"></div>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <div class="stats">
+                    <div class="stat reveal"><b>05</b><span>signature flavours</span></div>
+                    <div class="stat reveal"><b>100%</b><span>fruit-forward vibe</span></div>
+                    <div class="stat reveal"><b>24/7</b><span>refreshment energy</span></div>
+                    <div class="stat reveal"><b>∞</b><span>fresh moments</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <style>
+        .hero-slide img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: 44px
+        }
+
+        .hero-slide {
+            position: relative
+        }
+    </style>
+    <script>document.addEventListener("DOMContentLoaded", () => renderProducts("#homeGrid"))</script>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="logo">JIN<span>MAZA</span></div>
+                    <p style="margin-top:15px">Real fruit. Real freshness. Big flavour for everyday moments.</p>
+                </div>
+                <div>
+                    <h3>Explore</h3><a href="products.html">Flavours</a><a href="shop.html">Online Shop</a><a
+                        href="ingredients.html">Ingredients</a>
+                </div>
+                <div>
+                    <h3>Brand</h3><a href="about.html">Our Story</a><a href="contact.html">Contact</a><a
+                        href="product.html">Product Detail</a>
+                </div>
+                <div>
+                    <h3>Order</h3><a href="cart.html">Cart</a><a href="checkout.html">Checkout</a><a
+                        href="shop.html">Shop now</a>
+                </div>
+            </div>
+            <div class="footer-bottom">© 2026 JINMAZA. Demo beverage brand website built with HTML, CSS & Vanilla
+                JavaScript.</div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
